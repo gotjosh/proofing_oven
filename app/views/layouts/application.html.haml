@@ -1,0 +1,22 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    %title Proofing Oven
+    %meta(charset="UTF-8")
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "jquery-1.5.2.min", "rails"
+    = yield :head
+  %body
+    %header
+      %h1= link_to "Proofing Oven", root_path
+      %nav
+        %ul
+          %li.active= link_to "Candidates", "#"
+          %li= link_to "Skills", "#"
+      .session
+        %p Logged in as Shane Riley
+        = link_to "Sign up", "#"
+        \|
+        = link_to "Log in", "#"
+    #content
+      = yield

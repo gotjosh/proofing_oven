@@ -1,0 +1,111 @@
+@import "mixins"
+
+body
+  font: normal 14px Helvetica, Arial, sans-serif
+  color: #333333
+
+a
+  color: #0066cc
+
+.site_column
+  width: 940px
+  padding: 0 10px
+  margin: 0 auto
+
+form
+  dl
+    dt
+      padding: 0 0 5px 0
+      label
+        font-weight: bold
+      &.error
+        color: #b00b00
+      .field_with_errors
+        label
+          color: #c95353
+    dd
+      padding: 0 0 10px 0
+      input[type="text"], input[type="password"]
+        +input
+        margin: 0 0 5px 0
+        &:focus
+          color: #333333
+      textarea
+        +input
+        height: 80px
+        margin: 0 0 5px 0
+        padding-top: 4px
+      select
+        margin: 0 0 5px 0
+      &.error
+        input[type="text"], input[type="password"]
+          border-color: #b00b00
+          background: #faafaa
+    &.half
+      float: left
+      width: 50%
+    &.clear
+      clear: both
+    &.state
+      float: left
+      padding: 0 20px 0 0
+    &.zip
+      float: left
+      width: 94px
+      input[type="text"]
+        width: 82px
+  fieldset.actions
+    input[type="submit"], button
+      +button
+      padding: 6px 20px
+    a.cancel
+      +button(#a6a5a5)
+      padding: 7px 10px
+
+body
+  > header
+    position: relative
+    @extend .site_column
+    height: 130px
+    background: #cecece
+    h1
+      padding: 20px 0 0 20px
+      font-size: 24px
+      a
+        text-decoration: none
+    nav
+      position: absolute
+      left: 20px
+      bottom: 0
+      z-index: 1
+      li
+        float: left
+        padding: 0 10px 0 0
+        font-size: 16px
+        font-weight: bold
+        text-transform: uppercase
+        a
+          display: block
+          padding: 4px 10px
+          text-decoration: none
+        &.active
+          a
+            color: #333333
+            background: #ffffff
+    .session
+      position: absolute
+      right: 10px
+      top: 10px
+      z-index: 1
+      font-size: 12px
+      text-align: right
+      p
+        padding: 0 0 10px 0
+      a
+        margin: 0 5px 0 0
+        & + a
+          margin: 0 0 0 5px
+
+#content
+  @extend .site_column
+  padding: 40px 10px

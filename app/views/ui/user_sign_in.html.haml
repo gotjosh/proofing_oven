@@ -1,4 +1,4 @@
-%form
+%form(action="" method="post")
   %h1 Sign In
   %fieldset#sign_in
     %dl
@@ -10,7 +10,8 @@
         %label Password
       %dd
         %input(type='password')
-    %label Remember me
+    %label.checkbox
+      Remember me
       %input(type='checkbox')
   %fieldset.actions
     = submit_tag "Sign In"

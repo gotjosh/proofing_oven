@@ -1,2 +1,11 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+$(function() {
+  $("input[placeholder]").each(function() {
+    var $e = $(this),
+        placeholder = $e.attr("placeholder");
+    $e.removeAttr("placeholder").val(placeholder);
+    $e.bind("focus blur", function(e) {
+      if (e.type === "focus" && $e.val() === placeholder) { $e.val(""); }
+      else { if (!$e.val()) { $e.val(placeholder); } }
+    });
+  });
+});

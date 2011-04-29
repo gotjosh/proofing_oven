@@ -39,3 +39,11 @@
         %td Twitter
         %td Yes
         %td No
+
+.pagination
+  = link_to "Prev", "#", class: "previous_page"
+  %ul
+    %li.active= link_to "1", "#"
+    - 4.times do |i|
+      %li= link_to i + 2, "#"
+  = link_to "Next", "#", class: "next_page"

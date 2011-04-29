@@ -1,0 +1,167 @@
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+     Author:  	Tantek Celik, Shane Riley
+    Version:  	(CC) 2010 Some Rights Reserved - http://creativecommons.org/licenses/by/2.0
+Description:	Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+ul, ol {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6, pre, code {
+  font-size: 1em; }
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+a img, :link img, :visited img, fieldset {
+  border: none; }
+
+address {
+  font-style: normal; }
+
+header, section, article, nav, footer, hgroup {
+  display: block; }
+
+body {
+  font: normal 14px Helvetica, Arial, sans-serif;
+  color: #333333; }
+
+a {
+  color: #0066cc; }
+
+.site_column, body > header, #content {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto; }
+
+form dl dt {
+  padding: 0 0 5px 0; }
+  form dl dt label {
+    font-weight: bold; }
+  form dl dt.error {
+    color: #b00b00; }
+  form dl dt .field_with_errors label {
+    color: #c95353; }
+form dl dd {
+  padding: 0 0 10px 0; }
+  form dl dd input[type="text"], form dl dd input[type="password"] {
+    width: 268px;
+    height: 25px;
+    padding: 2px 5px;
+    margin: 0 0 5px 0;
+    font: normal 13px Helvetica, Arial, sans-serif;
+    color: #70706a;
+    border: 1px solid #c1c1c1;
+    background-color: #f1f1f1;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fefefe, endColorstr=#f1f1f1);
+    background-image: -moz-linear-gradient(100% 100% 90deg, #f1f1f1, #fefefe);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fefefe), to(#f1f1f1));
+    margin: 0 0 5px 0; }
+    form dl dd input[type="text"]:focus, form dl dd input[type="password"]:focus {
+      color: #333333; }
+  form dl dd textarea {
+    width: 268px;
+    height: 25px;
+    padding: 2px 5px;
+    margin: 0 0 5px 0;
+    font: normal 13px Helvetica, Arial, sans-serif;
+    color: #70706a;
+    border: 1px solid #c1c1c1;
+    background-color: #f1f1f1;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fefefe, endColorstr=#f1f1f1);
+    background-image: -moz-linear-gradient(100% 100% 90deg, #f1f1f1, #fefefe);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fefefe), to(#f1f1f1));
+    height: 80px;
+    margin: 0 0 5px 0;
+    padding-top: 4px; }
+  form dl dd select {
+    margin: 0 0 5px 0; }
+  form dl dd.error input[type="text"], form dl dd.error input[type="password"] {
+    border-color: #b00b00;
+    background: #faafaa; }
+form dl.half {
+  float: left;
+  width: 50%; }
+form dl.clear {
+  clear: both; }
+form dl.state {
+  float: left;
+  padding: 0 20px 0 0; }
+form dl.zip {
+  float: left;
+  width: 94px; }
+  form dl.zip input[type="text"] {
+    width: 82px; }
+form fieldset.actions input[type="submit"], form fieldset.actions button {
+  overflow: visible;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #5484cb;
+  padding: 6px 20px; }
+form fieldset.actions a.cancel {
+  overflow: visible;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #a6a5a5;
+  padding: 7px 10px; }
+
+body > header {
+  position: relative;
+  height: 130px;
+  background: #cecece; }
+  body > header h1 {
+    padding: 20px 0 0 20px;
+    font-size: 24px; }
+    body > header h1 a {
+      text-decoration: none; }
+  body > header nav {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    z-index: 1; }
+    body > header nav li {
+      float: left;
+      padding: 0 10px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase; }
+      body > header nav li a {
+        display: block;
+        padding: 4px 10px;
+        text-decoration: none; }
+      body > header nav li.active a {
+        color: #333333;
+        background: white; }
+  body > header .session {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    font-size: 12px;
+    text-align: right; }
+    body > header .session p {
+      padding: 0 0 10px 0; }
+    body > header .session a {
+      margin: 0 5px 0 0; }
+      body > header .session a + a {
+        margin: 0 0 0 5px; }
+
+#content {
+  padding: 40px 10px; }
