@@ -164,6 +164,10 @@ form fieldset.actions a.cancel {
   border-radius: 4px;
   background: #a6a5a5;
   padding: 7px 10px; }
+form fieldset.actions p {
+  padding: 10px 0 0 0; }
+  form fieldset.actions p a {
+    margin: 0 5px 0 0; }
 
 table.standard {
   width: 100%;
