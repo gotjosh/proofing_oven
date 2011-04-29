@@ -1,0 +1,11 @@
+%table.standard
+  %thead
+    %tr
+      - ["Name", ""].each do |th|
+        %th= th
+  %tbody
+    - 20.times do
+      %tr
+        %td Some Skill
+        %td
+          %a(href='#') remove
