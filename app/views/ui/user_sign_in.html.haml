@@ -1,0 +1,17 @@
+%form
+  %h1 Sign In
+  %fieldset#sign_in
+    %dl
+      %dt
+        %label Email
+      %dd
+        %input(type='text')
+      %dt
+        %label Password
+      %dd
+        %input(type='password')
+    %label Remember me
+      %input(type='checkbox')
+  %fieldset.actions
+    = submit_tag "Sign In"
+    = link_to 'Forgot Password', '#'

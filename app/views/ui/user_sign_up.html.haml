@@ -1,0 +1,20 @@
+%form
+  %h1 Sign Up
+  %fieldset#sign_up
+    %dl
+      %dt
+        %label Email
+      %dd
+        %input(type='text')
+      %dt
+        %label Password
+      %dd
+        %input(type='password')
+      %dt
+        %label Password Confirmation
+      %dd
+        %input(type='password')
+  %fieldset.actions
+    = submit_tag "Sign Up"
+    = link_to 'Sign In', '#'
+    = link_to 'Forgot Password', '#'
