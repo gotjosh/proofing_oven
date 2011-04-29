@@ -1,0 +1,41 @@
+.search
+  %form(action="" method="post")
+    %fieldset
+      %input(type="text")
+    %fieldset.actions
+      %input(type="submit" value="Search")
+  = link_to "Add New Candidate", "#", class: "button new"
+
+%form.filters(action="" method="post")
+  %fieldset
+    %dl
+      %dt
+        %label Skill
+      %dd
+        %select
+          %option Display All
+    %dl
+      %dt
+        %label Status
+      %dd
+        %select
+          %option Display All
+  %fieldset.actions
+    %input(type="submit" value="Filter")
+    = link_to "reset", "#"
+
+%table.standard
+  %thead
+    %tr
+      - ["Name", "Phone", "Email", "Github", "Twitter", "Local", "Willing to Relocate"].each do |th|
+        %th= th
+  %tbody
+    - 20.times do
+      %tr
+        %td John Doe
+        %td Phone
+        %td Email
+        %td GitHub
+        %td Twitter
+        %td Yes
+        %td No
