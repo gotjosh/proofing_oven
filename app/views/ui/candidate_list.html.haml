@@ -2,9 +2,8 @@
   %form(action="" method="post")
     %fieldset
       %input(type="text")
-    %fieldset.actions
       %input(type="submit" value="Search")
-  = link_to "Add New Candidate", "#", class: "button new"
+  = link_to "Add New Candidate", "#", class: "button add"
 
 %form.filters(action="" method="post")
   %fieldset
@@ -41,9 +40,9 @@
         %td No
 
 .pagination
-  = link_to "Prev", "#", class: "previous_page"
+  = link_to "Prev", "#", class: "prev"
   %ul
     %li.active= link_to "1", "#"
     - 4.times do |i|
       %li= link_to i + 2, "#"
-  = link_to "Next", "#", class: "next_page"
+  = link_to "Next", "#", class: "next"

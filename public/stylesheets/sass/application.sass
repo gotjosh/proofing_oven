@@ -6,6 +6,18 @@ body
 
 a
   color: #0066cc
+  &.button
+    +button
+    &:hover
+      background-color: #739cda
+  &.add
+    +button(#50b948)
+    padding: 7px 8px
+    span
+      padding: 2px 0 2px 30px
+      background: transparent url("/images/icon_add.png") 0 0 no-repeat
+    &:hover
+      background-color: #44a63d
 
 .site_column
   width: 940px
@@ -61,6 +73,84 @@ form
     a.cancel
       +button(#a6a5a5)
       padding: 7px 10px
+
+table.standard
+  width: 100%
+  margin: 0 0 20px 0
+  border-spacing: 0
+  border-collapse: collapse
+  th
+    padding: 2px 5px
+    font-size: 13px
+    text-align: left
+    border: 1px solid #ececec
+    border-width: 1px 0
+    background: #f7f7f7
+  tbody
+    td
+      padding: 5px
+
+.pagination
+  overflow: hidden
+  padding: 0 0 10px 0
+  a.prev, a.next
+    float: left
+    padding: 3px 7px
+    font-weight: bold
+    color: #ffffff
+    text-decoration: none
+    background: #5484cb
+  ul
+    float: left
+    padding: 2px 10px 0 10px
+    li
+      display: inline
+      padding: 0 5px 0 0
+      font-size: 14px
+      color: #000000
+      &.active
+        a
+          padding: 3px 4px
+          color: #ffffff
+          text-decoration: none
+          background: #666666
+
+.search
+  clear: both
+  overflow: hidden
+  padding: 20px
+  margin: 0 0 10px 0
+  background: #ebebd8
+  form
+    float: left
+    input[type="text"]
+      +input(266px)
+      float: left
+      margin: 0 3px 0 0
+      font-weight: bold
+    input[type="submit"]
+      +button
+      float: left
+  a.add, a.back
+    float: right
+
+.filters
+  overflow: hidden
+  padding: 20px
+  margin: 0 0 20px 0
+  background: #f7f7f7
+  fieldset
+    float: left
+    &.actions
+      padding: 20px 0 0 0
+      input[type="submit"]
+        margin: 0 10px 0 0
+      a
+        +button(#aaaaaa)
+        color: #333333
+  dl
+    float: left
+    width: 220px
 
 body
   > header
