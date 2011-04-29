@@ -69,6 +69,11 @@ a {
   padding: 0 10px;
   margin: 0 auto; }
 
+h1 {
+  padding: 0 0 10px 0;
+  font-size: 22px;
+  color: black; }
+
 form dl dt {
   padding: 0 0 5px 0; }
   form dl dt label {
@@ -94,6 +99,8 @@ form dl dd {
     margin: 0 0 5px 0; }
     form dl dd input[type="text"]:focus, form dl dd input[type="password"]:focus {
       color: #333333; }
+  form dl dd input[type="file"] {
+    margin: 0 0 5px 0; }
   form dl dd textarea {
     width: 268px;
     height: 25px;
@@ -127,6 +134,10 @@ form dl.zip {
   width: 94px; }
   form dl.zip input[type="text"] {
     width: 82px; }
+form label.checkbox {
+  display: block;
+  padding: 0 0 10px 10px;
+  font-weight: bold; }
 form fieldset.actions input[type="submit"], form fieldset.actions button {
   overflow: visible;
   padding: 7px 20px;

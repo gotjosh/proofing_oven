@@ -24,6 +24,11 @@ a
   padding: 0 10px
   margin: 0 auto
 
+h1
+  padding: 0 0 10px 0
+  font-size: 22px
+  color: #000000
+
 form
   dl
     dt
@@ -42,6 +47,8 @@ form
         margin: 0 0 5px 0
         &:focus
           color: #333333
+      input[type="file"]
+        margin: 0 0 5px 0
       textarea
         +input
         height: 80px
@@ -66,6 +73,10 @@ form
       width: 94px
       input[type="text"]
         width: 82px
+  label.checkbox
+    display: block
+    padding: 0 0 10px 10px
+    font-weight: bold
   fieldset.actions
     input[type="submit"], button
       +button
