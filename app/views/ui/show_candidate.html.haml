@@ -1,0 +1,51 @@
+%section#candidate_show
+  #main
+    %header
+      %h1 John Doe
+      %dl.small
+        %dt Status
+        %dd Pending
+      %dl
+        %dt Email
+        %dd john@doe.com
+      %dl
+        %dt Contact Phone
+        %dd (555) 555-5555
+      %dl
+        %dt Github
+        %dd johndoe
+      %dl
+        %dt Twitter
+        %dd johndoe
+      %dl
+        %dt Added On
+        %dd 01/01/2011
+      %dl
+        %dt Resume
+        %dd
+          %a(href='#') john-doe.pdf
+    %article
+      %h1 04/23/2011
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis pretium mi, quis vehicula tortor ultricies et. Ut eget massa at neque tempor vehicula vitae at erat. Sed velit nisl, consequat consectetur condimentum congue, feugiat a dolor. Nulla et sem sem. Fusce pharetra nunc interdum nulla imperdiet eget vulputate metus porttitor. Curabitur sed odio neque. Donec erat risus, blandit a varius quis, suscipit quis dui. Maecenas eleifend dui ut sem aliquet et vestibulum magna viverra. Sed rhoncus accumsan sapien ut faucibus.
+      %a(href="#") delete
+    %article
+      %h1 03/23/2011
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis pretium mi, quis vehicula tortor ultricies et. Ut eget massa at neque tempor vehicula vitae at erat. Sed velit nisl, consequat consectetur condimentum congue, feugiat a dolor.
+      %a(href="#") delete
+    %article
+    %p= link_to 'Add Note', '#'
+    %form(action="" method="post")
+      %fieldset
+        %dl
+          %dt
+            %label Note
+          %dd
+            %textarea(rows="8" cols="80")
+      %fieldset.actions
+        %input(type="submit" value="Add Candidate")
+        %a(href="#") Cancel
+    %p.edit= link_to "Edit Candidate", "#", class: "button"
+  %aside
+    %figure
+      %figcaption Profile Image
+      = image_tag dummy_image(200, 200), alt: "Profile Image"
