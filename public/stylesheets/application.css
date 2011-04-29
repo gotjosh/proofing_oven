@@ -314,3 +314,104 @@ body > header {
 
 #content {
   padding: 40px 10px; }
+
+#candidate_show #main {
+  float: left;
+  width: 580px;
+  padding: 0 20px 20px 0; }
+  #candidate_show #main header {
+    position: relative;
+    padding: 0 0 20px 0; }
+    #candidate_show #main header a.edit {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      z-index: 1; }
+    #candidate_show #main header h1 {
+      padding: 0; }
+    #candidate_show #main header p {
+      padding: 0 0 10px 0;
+      font-size: 14px;
+      line-height: 160%; }
+      #candidate_show #main header p a.button {
+        padding: 3px 10px;
+        margin: 0 0 0 20px;
+        font-size: 12px; }
+      #candidate_show #main header p.featured {
+        padding-left: 22px;
+        font-size: 13px;
+        font-weight: bold;
+        color: black;
+        background: transparent url("/images/icon_star.png") 0 1px no-repeat; }
+    #candidate_show #main header dl dt {
+      padding: 0 0 3px 0;
+      font-weight: bold;
+      color: black; }
+    #candidate_show #main header dl dd {
+      padding: 0 0 15px 0; }
+    #candidate_show #main header dl.small {
+      float: left;
+      width: 130px;
+      padding: 0 20px 0 0; }
+    #candidate_show #main header dl.clear {
+      clear: both; }
+    #candidate_show #main header .stats {
+      clear: both;
+      overflow: hidden;
+      padding: 20px 0 20px 14px;
+      background: #ebebd8; }
+      #candidate_show #main header .stats dl {
+        float: left;
+        width: 84px;
+        padding: 0 10px 0 0;
+        color: black; }
+        #candidate_show #main header .stats dl dt {
+          padding: 0 0 5px 0;
+          font-size: 12px;
+          font-weight: bold;
+          text-align: center; }
+        #candidate_show #main header .stats dl dd {
+          padding: 5px 0;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          background: white; }
+          #candidate_show #main header .stats dl dd.active {
+            color: #50b948; }
+  #candidate_show #main article {
+    padding: 0 0 20px 0; }
+    #candidate_show #main article h1 {
+      padding: 0;
+      font-size: 12px; }
+    #candidate_show #main article p {
+      padding: 10px 0 5px 0;
+      line-height: 150%; }
+    #candidate_show #main article a.delete {
+      font-size: 11px; }
+  #candidate_show #main p.edit {
+    padding: 15px 0 0 0; }
+#candidate_show p.actions {
+  overflow: hidden;
+  padding: 0 0 20px 0; }
+  #candidate_show p.actions a {
+    float: left; }
+#candidate_show aside {
+  overflow: hidden;
+  padding: 15px 20px 0 20px;
+  background: #ebebd8; }
+  #candidate_show aside figure {
+    display: block;
+    padding: 0 0 15px 0; }
+    #candidate_show aside figure figcaption {
+      display: block;
+      padding: 0 0 5px 0;
+      font-weight: bold;
+      color: black; }
+    #candidate_show aside figure img {
+      border: 1px solid #c1c1c1; }
+#candidate_show form.note textarea {
+  width: 480px; }
+#candidate_show form.note fieldset.actions input[type="submit"] {
+  margin: 0 10px 0 0; }

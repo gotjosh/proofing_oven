@@ -210,3 +210,107 @@ body
 #content
   @extend .site_column
   padding: 40px 10px
+
+#candidate_show
+  #main
+    float: left
+    width: 580px
+    padding: 0 20px 20px 0
+    header
+      position: relative
+      padding: 0 0 20px 0
+      a.edit
+        position: absolute
+        right: 0
+        top: 5px
+        z-index: 1
+      h1
+        padding: 0
+      p
+        padding: 0 0 10px 0
+        font-size: 14px
+        line-height: 160%
+        a.button
+          padding: 3px 10px
+          margin: 0 0 0 20px
+          font-size: 12px
+        &.featured
+          padding-left: 22px
+          font-size: 13px
+          font-weight: bold
+          color: #000000
+          background: transparent url("/images/icon_star.png") 0 1px no-repeat
+      dl
+        dt
+          padding: 0 0 3px 0
+          font-weight: bold
+          color: #000000
+        dd
+          padding: 0 0 15px 0
+        &.small
+          float: left
+          width: 130px
+          padding: 0 20px 0 0
+        &.clear
+          clear: both
+      .stats
+        clear: both
+        overflow: hidden
+        padding: 20px 0 20px 14px
+        background: #ebebd8
+        dl
+          float: left
+          width: 84px
+          padding: 0 10px 0 0
+          color: #000000
+          dt
+            padding: 0 0 5px 0
+            font-size: 12px
+            font-weight: bold
+            text-align: center
+          dd
+            padding: 5px 0
+            font-size: 16px
+            font-weight: bold
+            text-align: center
+            +border-radius(5px)
+            background: #ffffff
+            &.active
+              color: #50b948
+    article
+      padding: 0 0 20px 0
+      h1
+        padding: 0
+        font-size: 12px
+      p
+        padding: 10px 0 5px 0
+        line-height: 150%
+      a.delete
+        font-size: 11px
+    p.edit
+      padding: 15px 0 0 0
+  p.actions
+    overflow: hidden
+    padding: 0 0 20px 0
+    a
+      float: left
+  aside
+    overflow: hidden
+    padding: 15px 20px 0 20px
+    background: #ebebd8
+    figure
+      display: block
+      padding: 0 0 15px 0
+      figcaption
+        display: block
+        padding: 0 0 5px 0
+        font-weight: bold
+        color: #000000
+      img
+        border: 1px solid #c1c1c1
+  form.note
+    textarea
+      width: 480px
+    fieldset.actions
+      input[type="submit"]
+        margin: 0 10px 0 0
