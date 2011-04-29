@@ -5,19 +5,21 @@ body
   color: #333333
 
 a
-  color: #0066cc
+  color: #107FC9
+  &:hover
+    text-decoration: none
   &.button
     +button
     &:hover
-      background-color: #739cda
+      background-color: #2091dc
   &.add
-    +button(#50b948)
+    +button(#14b314)
     padding: 7px 8px
     span
       padding: 2px 0 2px 30px
       background: transparent url("/images/icon_add.png") 0 0 no-repeat
     &:hover
-      background-color: #44a63d
+      background-color: #20c520
 
 .site_column
   width: 940px
@@ -114,7 +116,7 @@ table.standard
     font-weight: bold
     color: #ffffff
     text-decoration: none
-    background: #5484cb
+    background: #107FC9
   ul
     float: left
     padding: 2px 10px 0 10px
@@ -128,14 +130,14 @@ table.standard
           padding: 3px 4px
           color: #ffffff
           text-decoration: none
-          background: #666666
+          background: #999999
 
 .search
   clear: both
   overflow: hidden
   padding: 20px
   margin: 0 0 10px 0
-  background: #ebebd8
+  background: #e0e0e0
   form
     float: left
     input[type="text"]
@@ -171,12 +173,18 @@ body
   > header
     position: relative
     @extend .site_column
-    height: 130px
-    background: #cecece
+    height: 140px
+    background: #EEEEEE
     h1
-      padding: 20px 0 0 20px
+      padding: 15px 0 0 20px
       font-size: 24px
       a
+        display: block
+        width: 206px
+        height: 71px
+        text-indent: -9000px
+        overflow: hidden
+        background: transparent url("/images/logo.png") no-repeat
         text-decoration: none
     nav
       position: absolute
@@ -186,12 +194,11 @@ body
       li
         float: left
         padding: 0 10px 0 0
-        font-size: 16px
+        font-size: 18px
         font-weight: bold
-        text-transform: uppercase
         a
           display: block
-          padding: 4px 10px
+          padding: 8px 10px
           text-decoration: none
         &.active
           a
@@ -301,7 +308,7 @@ body
   aside
     overflow: hidden
     padding: 15px 20px 0 20px
-    background: #ebebd8
+    background: #EEEEEE
     figure
       display: block
       padding: 0 0 15px 0
