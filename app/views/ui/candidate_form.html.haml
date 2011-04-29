@@ -1,0 +1,59 @@
+%form(action="" method="post")
+  %h1 Add a New Candidate
+  %fieldset
+    %dl
+      %dt
+        %label First Name
+      %dd
+        %input(type="text")
+      %dt
+        %label Last Name
+      %dd
+        %input(type="text")
+      %dt
+        %label Email
+      %dd
+        %input(type="text")
+      %dt
+        %label Contact Phone
+      %dd
+        %input(type="text")
+      %dt
+        %label Status
+      %dd
+        %select
+          %option pending
+          %option hired
+          %option rejected
+      %dt
+        %label Github Id
+      %dd
+        %input(type="text")
+      %dt
+        %label Twitter ID
+      %dd
+        %input(type="text")
+      %dt
+        %label Profile Image
+      %dd
+        %input(type="file")
+      %dt
+        %label Resume
+      %dd
+        %input(type="file")
+      %dt
+        %label Note
+      %dd
+        %textarea(rows="8" cols="80")
+    %label.checkbox
+      Local
+      %input(type="checkbox")
+    %label.checkbox
+      Willing to relocate
+      %input(type="checkbox")
+  %fieldset.actions
+    %input(type="submit" value="Add Candidate")
+    %a(href="#") Cancel
+
+
+
