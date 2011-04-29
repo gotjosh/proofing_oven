@@ -80,9 +80,11 @@ form
     padding: 0 0 10px 10px
     font-weight: bold
   fieldset.actions
+    padding: 20px 0 0
     input[type="submit"], button
       +button
       padding: 6px 20px
+      margin: 0 10px 0 0
     a.cancel
       +button(#a6a5a5)
       padding: 7px 10px
@@ -97,12 +99,11 @@ table.standard
   border-spacing: 0
   border-collapse: collapse
   th
-    padding: 2px 5px
+    padding: 8px 8px
     font-size: 13px
     text-align: left
-    border: 1px solid #ececec
-    border-width: 1px 0
-    background: #f7f7f7
+    border-bottom: 1px solid #E0E0E0
+    background: #EEE
   tbody
     td
       padding: 5px
@@ -161,13 +162,13 @@ table.standard
     &.actions
       padding: 20px 0 0 0
       input[type="submit"]
-        margin: 0 10px 0 0
+        margin: 0 5px 0 0
       a
         +button(#aaaaaa)
         color: #333333
   dl
     float: left
-    width: 220px
+    margin: 0 20px 0 0
 
 body
   > header
@@ -236,7 +237,7 @@ body
         top: 5px
         z-index: 1
       h1
-        padding: 0
+        padding: 0 0 20px
       p
         padding: 0 0 10px 0
         font-size: 14px
