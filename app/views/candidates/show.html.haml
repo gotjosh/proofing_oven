@@ -23,7 +23,7 @@
         %dd= candidate.created_at.to_s(:short_slash)
       %dl
         %dt State
-        %dd= candidate.status.humanize
+        %dd= candidate.status.try(:humanize)
       %dl
         %dt Local
         %dd= candidate.local? ? 'Yes' : 'No'
