@@ -16,6 +16,7 @@ group :development, :test do
   gem 'fuubar'
   gem 'fuubar-cucumber'
   gem 'itslog'
+  gem 'launchy'
   gem 'pickler'
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug'
