@@ -2,6 +2,7 @@ class Candidate
   include Mongoid::Document
 
   embedded_in :user
+
   field :first_name
   field :last_name
   field :email
@@ -15,5 +16,9 @@ class Candidate
 
   def name
     [first_name, last_name].join(" ")
+  end
+
+  set_callback :save, :before do
+    self.added_on ||= Date.today
   end
 end
