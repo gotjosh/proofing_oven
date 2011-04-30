@@ -6,8 +6,11 @@ class CandidatesController < ApplicationController
 
   def create
     if candidate.save
-      redirect_to candidates_path, notice: "Candidate created successfully"
+      flash[:notice] = 'Candidate created successfully'
+    else
+      flash[:notice] = 'There was a problem saving your candidate'
     end
+    respond_with candidate, location: candidates_url
   end
 
   def update

@@ -1,5 +1,7 @@
-= form_for candidate do |f|
+= form_for candidate, builder: ErrorMessagesFormBuilder do |f|
   %h1 Edit Candidate
+
+  = f.error_messages
 
   = render 'form', form: f
 
