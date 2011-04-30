@@ -4,7 +4,7 @@
     %fieldset
       %input(type="text")
       %input(type="submit" value="Search")
-  = link_to "Add New Candidate", "#", class: "button add"
+  = link_to "Add New Candidate", [:new, :candidate], class: "button add"
 
 %form.filters(action="" method="post")
   %fieldset

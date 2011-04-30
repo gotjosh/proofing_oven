@@ -1,6 +1,8 @@
 class Candidate
   include Mongoid::Document
 
+  STATES = %w(Pending Accepted Rejected)
+
   embedded_in :user
 
   field :first_name
