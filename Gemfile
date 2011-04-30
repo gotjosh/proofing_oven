@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'decent_exposure'
 gem 'haml'
 gem 'sass'
 gem 'rails', '3.0.7'
