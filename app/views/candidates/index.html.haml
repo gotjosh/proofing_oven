@@ -1,4 +1,10 @@
 .search
   = link_to 'Add New Candidate', new_candidate_path, :class => "button add"
 
-= render candidates
+%table.standard
+  %thead
+    %tr
+      - ["Name", "Phone", "Email", "Github", "Twitter"].each do |th|
+        %th= th
+  %tbody
+    = render candidates
