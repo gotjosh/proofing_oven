@@ -7,8 +7,6 @@
     = javascript_include_tag "jquery-1.5.2.min", "rails", "application"
     = yield :head
   %body
-    - flash.keys.each do |key|
-      %p{:class => key}= flash[key]
     %header
       %h1= link_to "Proofing Oven", root_path
       %nav
@@ -16,9 +14,13 @@
           %li.active= link_to "Candidates", "#"
           %li= link_to "Skills", "#"
       .session
-        %p Logged in as Shane Riley
-        = link_to "Sign up", "#"
-        \|
-        = link_to "Log in", "#"
+        - if user_signed_in?
+          %p Logged in as #{current_user.email}
+        - else
+          = link_to "Sign up", new_user_registration_path
+          \|
+          = link_to "Log in", "#"
     #content
+      - flash.keys.each do |key|
+        %p{:class => key}= flash[key]
       = yield
