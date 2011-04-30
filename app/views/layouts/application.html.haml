@@ -6,6 +6,9 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "jquery-1.5.2.min", "rails", "application"
     = yield :head
+    - if Rails.env.test?
+      :javascript
+        window.confirm = function() { return true };
   %body
     %header
       %h1= link_to "Proofing Oven", root_path
