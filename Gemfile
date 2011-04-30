@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'bson_ext'
+gem 'devise', '1.3.4'
 gem 'haml-rails'
 gem 'mongoid'
 gem 'sass'

@@ -22,6 +22,8 @@ module ProofingOven
       g.fixture_replacement :fabrication
     end
 
+    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
