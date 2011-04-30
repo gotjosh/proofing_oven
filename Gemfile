@@ -12,6 +12,7 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'fabrication'
+  gem 'ffaker'
   gem 'fuubar'
   gem 'fuubar-cucumber'
   gem 'hpricot'

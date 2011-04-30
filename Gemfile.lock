@@ -82,6 +82,7 @@ GEM
     escape (0.0.4)
     eventmachine (0.12.10)
     fabrication (0.9.5)
+    ffaker (1.5.0)
     ffi (1.0.7)
       rake (>= 0.8.7)
     fuubar (0.0.4)
@@ -199,6 +200,7 @@ DEPENDENCIES
   devise
   engineyard
   fabrication
+  ffaker
   fuubar
   fuubar-cucumber
   haml
