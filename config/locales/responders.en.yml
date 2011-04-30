@@ -1,0 +1,9 @@
+en:
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} created successfully.'
+        alert: 'There was a problem saving your %{downcased_resource_name}.'
+      update:
+        notice: '%{resource_name} was successfully updated.'
+        alert: 'There was a problem saving your %{downcased_resource_name}.'

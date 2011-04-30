@@ -25,4 +25,5 @@ Feature: User edits candidate
 
     Then I should see "First name can't be blank"
     And I should see "Last name can't be blank"
+    And I should see "There was a problem saving your candidate"
 
