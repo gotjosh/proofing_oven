@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe User do
+  it { should validate_presence_of(:email) }
+
   describe "#full_name" do
     let(:user) { Fabricate(:user, first_name: "Bob", last_name: "Smith") }
     subject { user.full_name }
