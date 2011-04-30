@@ -13,6 +13,7 @@
         %ul
           %li.active= link_to "Candidates", "#"
           %li= link_to "Skills", "#"
+          %li= link_to "Wireframes", wireframe_path(:index) if Rails.env.development?
       .session
         %p Logged in as Shane Riley
         = link_to "Sign up", "#"
