@@ -1,0 +1,20 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    %title Proofing Oven
+    %meta(charset="UTF-8")
+    = stylesheet_link_tag "application"
+    = yield :head
+  %body
+    %header
+      %h1= link_to "Proofing Oven", root_path
+      .session
+        = link_to "Sign up", new_user_registration_path
+        \|
+        = link_to "Sign in", "#"
+    #content
+      - if flash.any?
+        .flash
+          - flash.each do |type, message|
+            %div(id = "flash_#{type}")= message
+      = yield

@@ -25,6 +25,24 @@ address {
 header, section, article, nav, footer, hgroup {
   display: block; }
 
+div.flash div {
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px 20px 10px 20px;
+  margin: 0 10px 30px 70px;
+  opacity: 0.7;
+  filter: alpha(opacity=70); }
+
+#flash_error, #flash_alert {
+  background: #f5b5b7;
+  color: #cc0000;
+  border: 1px solid #de8a8c; }
+
+#flash_notice, #flash_success {
+  color: #009900;
+  border: 1px solid #009900;
+  background: #aaddaa; }
+
 body {
   font: normal 14px Helvetica, Arial, sans-serif;
   color: #333333; }
@@ -86,7 +104,7 @@ form dl dt {
     color: #c95353; }
 form dl dd {
   padding: 0 0 10px 0; }
-  form dl dd input[type="text"], form dl dd input[type="password"] {
+  form dl dd input[type="text"], form dl dd input[type="password"], form dl dd input[type="email"] {
     width: 268px;
     height: 25px;
     padding: 2px 5px;
@@ -99,7 +117,7 @@ form dl dd {
     background-image: -moz-linear-gradient(100% 100% 90deg, #f1f1f1, #fefefe);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fefefe), to(#f1f1f1));
     margin: 0 0 5px 0; }
-    form dl dd input[type="text"]:focus, form dl dd input[type="password"]:focus {
+    form dl dd input[type="text"]:focus, form dl dd input[type="password"]:focus, form dl dd input[type="email"]:focus {
       color: #333333; }
   form dl dd input[type="file"] {
     margin: 0 0 5px 0; }

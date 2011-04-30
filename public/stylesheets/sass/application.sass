@@ -1,5 +1,20 @@
 @import "mixins"
 
+div.flash div
+  font-weight: bold
+  font-size: 13px
+  padding: 10px 20px 10px 20px
+  margin: 0 10px 30px 70px
+  +opacity(0.7)
+#flash_error, #flash_alert
+  background: #f5b5b7
+  color: #cc0000
+  border: 1px solid #de8a8c
+#flash_notice, #flash_success
+  color: #009900
+  border: 1px solid #009900
+  background: #aaddaa
+
 body
   font: normal 14px Helvetica, Arial, sans-serif
   color: #333333
@@ -44,7 +59,7 @@ form
           color: #c95353
     dd
       padding: 0 0 10px 0
-      input[type="text"], input[type="password"]
+      input[type="text"], input[type="password"], input[type="email"]
         +input
         margin: 0 0 5px 0
         &:focus
