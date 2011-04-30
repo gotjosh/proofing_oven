@@ -14,9 +14,14 @@
           %li.active= link_to "Candidates", "#"
           %li= link_to "Skills", "#"
       .session
-        %p Logged in as Shane Riley
+        - if current_user.present?
+          %p Logged in as #{current_user.full_name}
         = link_to "Sign up", "#"
         \|
-        = link_to "Log in", "#"
+        = link_to "Log in", new_user_session_path
     #content
+      - if flash.any?
+        .flash
+          - flash.each do |type, message|
+            %div(id = "flash_#{type}")= message
       = yield

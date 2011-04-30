@@ -1,0 +1,14 @@
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  %h1 Sign In
+  %fieldset#sign_in
+    %dl
+      %dt= f.label :email
+      %dd= f.text_field :email
+      %dt= f.label :password
+      %dd= f.password_field :password
+    %label.checkbox
+      %input(type='checkbox')
+      Remember me
+  %fieldset.actions
+    = f.submit "Sign In"
+    = link_to 'Forgot Password', '#'
