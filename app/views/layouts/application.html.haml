@@ -17,9 +17,12 @@
           %li.active= link_to "Candidates", "#"
           %li= link_to "Skills", "#"
       .session
-        %p Logged in as Shane Riley
-        = link_to "Sign up", "#"
-        \|
-        = link_to "Log in", "#"
+        - if user_signed_in?
+          %p Signed in as #{current_user.email}
+        - else
+          = link_to "Sign up", "#"
+          \|
+          = link_to "Sign In", [:new, :user_session]
+
     #content
       = yield
