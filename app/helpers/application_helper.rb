@@ -4,4 +4,8 @@ module ApplicationHelper
     "http://dummyimage.com/#{width}X#{height}/#{bg_color}/#{fg_color}"
   end
 
+  def humanize_boolean(bool)
+    bool ? "Yes" : "No"
+  end
+
 end

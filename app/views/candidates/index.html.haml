@@ -11,5 +11,5 @@
         %td= candidate.email
         %td= candidate.github
         %td= candidate.twitter
-        %td= candidate.local? ? 'Yes' : 'No'
-        %td= candidate.willing_to_relocate? ? 'Yes' : 'No'
+        %td= humanize_boolean(candidate.local)
+        %td= humanize_boolean(candidate.willing_to_relocate)
