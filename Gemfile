@@ -5,7 +5,6 @@ gem 'haml'
 gem 'mysql2', '0.2.7'
 gem 'sass'
 gem 'rails', '3.0.7'
-gem 'sqlite3'
 
 group :development, :test do
   gem 'engineyard'
