@@ -17,6 +17,7 @@ group :development, :test do
   gem 'fuubar-cucumber'
   gem 'itslog'
   gem 'launchy'
+  gem 'shoulda'
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug'
   gem 'thin'
