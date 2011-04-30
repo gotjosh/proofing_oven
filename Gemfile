@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'decent_exposure'
 gem 'haml'
+gem 'mongoid'
 gem 'sass'
 gem 'rails', '3.0.7'
 gem 'sqlite3'
