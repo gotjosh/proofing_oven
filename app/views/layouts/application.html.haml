@@ -7,6 +7,8 @@
     = javascript_include_tag "jquery-1.5.2.min", "rails", "application"
     = yield :head
   %body
+    - flash.keys.each do |key|
+      %p{:class => key}= flash[key]
     %header
       %h1= link_to "Proofing Oven", root_path
       %nav
