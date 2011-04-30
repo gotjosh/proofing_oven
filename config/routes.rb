@@ -1,5 +1,9 @@
 ProofingOven::Application.routes.draw do
-  match 'ui(/:action)', controller: 'ui'
   devise_for :users
+
+  resources :candidates, only: :index
+
+  match 'ui(/:action)', controller: 'ui'
+
   root to: 'pages#index'
 end
