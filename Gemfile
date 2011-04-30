@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'devise'
 gem 'haml'
-gem 'mysql'
+gem 'mysql2', '0.2.7'
 gem 'sass'
 gem 'rails', '3.0.7'
 gem 'sqlite3'
