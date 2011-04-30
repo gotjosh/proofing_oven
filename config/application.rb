@@ -2,7 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require "action_controller/railtie"
 require "action_mailer/railtie"
-require "active_record/railtie"
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -16,6 +15,7 @@ module ProofingOven
 
     config.generators do |g|
       g.controller          :helper => false, :test_framework => false
+      g.orm                 :mongoid
       g.template_engine     :haml
       g.test_framework      :rspec, :fixture => true, :views => false, :controllers => false
       g.integration_tool    :rspec, :fixture => true, :views => false
