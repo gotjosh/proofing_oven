@@ -20,4 +20,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug'
   gem 'thin'
+  gem 'email_spec'
+  gem 'launchy'
+  gem 'shoulda'
 end
