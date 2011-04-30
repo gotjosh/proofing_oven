@@ -1,25 +1,27 @@
 = form_for candidate do |f|
-  %dl
-    %dt= f.label :first_name, 'First Name'
-    %dd= f.text_field :first_name
-  %dl
-    %dt= f.label :last_name, 'Last Name'
-    %dd= f.text_field :last_name
-  %dl
-    %dt= f.label :email
-    %dd= f.text_field :email
-  %dl
-    %dt= f.label :contact_phone, 'Contact Phone'
-    %dd= f.text_field :contact_phone
-  %dl
-    %dt= f.label :github_id, 'Github ID'
-    %dd= f.text_field :github_id
-  %dl
-    %dt= f.label :twitter_id, 'Twitter ID'
-    %dd= f.text_field :twitter_id
-  %dl
-    %dt= f.label :note
-    %dd= f.text_area :note
+  %h1 Add a New Candidate
+  %fieldset
+    %dl
+      %dt= f.label :first_name, 'First Name'
+      %dd= f.text_field :first_name
+    %dl
+      %dt= f.label :last_name, 'Last Name'
+      %dd= f.text_field :last_name
+    %dl
+      %dt= f.label :email
+      %dd= f.text_field :email
+    %dl
+      %dt= f.label :contact_phone, 'Contact Phone'
+      %dd= f.text_field :contact_phone
+    %dl
+      %dt= f.label :github_id, 'Github ID'
+      %dd= f.text_field :github_id
+    %dl
+      %dt= f.label :twitter_id, 'Twitter ID'
+      %dd= f.text_field :twitter_id
+    %dl
+      %dt= f.label :note
+      %dd= f.text_area :note
 
-  %fieldset.actions
-    = f.submit 'Add Candidate'
+    %fieldset.actions
+      = f.submit 'Add Candidate'
