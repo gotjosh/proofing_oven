@@ -25,7 +25,6 @@ Feature: User views candidates
       | Kelly      | Pickler   | 5555555555 | kelly@pickler.com | kpickler  | pickle  | false | true                | 2011-04-23 | rejected |
     When I follow "Candidates"
     Then the "Candidates" tab should be highlighted
-    And show me the page
     And I should see the following table:
       | Name          | Phone      | Email             | Github    | Twitter | Local | Willing to Relocate | Added On   | Status   |
       | Kelly Pickler | 5555555555 | kelly@pickler.com | kpickler  | pickle  | No    | Yes                 | 04/23/2011 | rejected |
