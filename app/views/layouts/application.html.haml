@@ -11,7 +11,7 @@
       %h1= link_to "Proofing Oven", root_path
       %nav
         %ul
-          %li.active= link_to "Candidates", "#"
+          %li.active= link_to "Candidates", [:candidates]
           %li= link_to "Skills", "#"
       .session
         - if user_signed_in?

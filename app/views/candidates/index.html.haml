@@ -1,0 +1,15 @@
+%table.standard
+  %thead
+    %tr
+      - ["Name", "Phone", "Email", "Github", "Twitter", "Local", "Willing to Relocate"].each do |th|
+        %th= th
+  %tbody
+    - candidates.each do |candidate|
+      %tr
+        %td= candidate.name
+        %td= candidate.phone
+        %td= candidate.email
+        %td= candidate.github
+        %td= candidate.twitter
+        %td= candidate.local? ? 'Yes' : 'No'
+        %td= candidate.willing_to_relocate? ? 'Yes' : 'No'
