@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110430182026) do
+ActiveRecord::Schema.define(:version => 20110430201501) do
 
   create_table "candidates", :force => true do |t|
     t.string   "first_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110430182026) do
     t.boolean  "willing_to_relocate"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
   end
 
   create_table "users", :force => true do |t|

@@ -1,4 +1,7 @@
 Fabricator(:candidate) do
+end
+
+Fabricator(:populate_candidate, from: :candidate) do
   first_name "John"
   last_name "Doe"
   email { Fabricate.sequence(:email) {|i| "user#{i}-#{Time.now.to_i}@example.com" } }

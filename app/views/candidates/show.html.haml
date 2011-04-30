@@ -1,0 +1,32 @@
+%section#candidate_show
+  #main
+    %header
+      = link_to "Edit Candidate", "#", class: "edit"
+      %h1= candidate.name
+      %dl.small
+        %dt Status
+        %dd= candidate.status
+      %dl
+        %dt Email
+        %dd= candidate.email
+      %dl
+        %dt Contact Phone
+        %dd= candidate.phone
+      %dl
+        %dt Github
+        %dd= candidate.github
+      %dl
+        %dt Twitter
+        %dd= candidate.twitter
+      %dl
+        %dt Added On
+        %dd= candidate.created_at.to_s(:short_slash)
+      %dl
+        %dt State
+        %dd= candidate.status.humanize
+      %dl
+        %dt Local
+        %dd= candidate.local? ? 'Yes' : 'No'
+      %dl
+        %dt Willing to Relocate
+        %dd= candidate.willing_to_relocate? ? 'Yes' : 'No'
