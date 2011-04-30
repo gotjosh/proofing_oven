@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'decent_exposure'
 gem 'devise'
 gem 'haml'
 gem 'sass'
