@@ -16,4 +16,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug'
   gem 'thin'
+  gem 'watchr'
 end
