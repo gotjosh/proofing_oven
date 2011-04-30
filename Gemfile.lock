@@ -78,6 +78,11 @@ GEM
     gherkin (2.3.6)
       json (>= 1.4.6)
     haml (3.1.1)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     i18n (0.5.0)
     itslog (0.0.1)
     json (1.5.1)
@@ -177,7 +182,7 @@ DEPENDENCIES
   fabrication
   fuubar
   fuubar-cucumber
-  haml
+  haml-rails
   itslog
   mongoid
   pickler
