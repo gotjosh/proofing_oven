@@ -6,7 +6,7 @@
   %tbody
     - candidates.each do |candidate|
       %tr
-        %td= candidate.name
+        %td= link_to(candidate.name, candidate_path(candidate))
         %td= candidate.phone
         %td= candidate.email
         %td= candidate.github

@@ -1,0 +1,26 @@
+%section#candidate_show
+  #main
+    %header
+
+      %h1= candidate.name
+      %dl.small
+        %dt Status
+        %dd= candidate.status
+      %dl
+        %dt Email
+        %dd= mail_to candidate.email
+      %dl
+        %dt Contact Phone
+        %dd= candidate.phone
+      %dl
+        %dt Github
+        %dd= candidate.github
+      %dl
+        %dt Twitter
+        %dd= candidate.twitter
+      %dl
+        %dt Local?
+        %dd= boolean_transformer(candidate.local)
+      %dl
+        %dt Willing to Relocate?
+        %dd= boolean_transformer(candidate.relocate)
