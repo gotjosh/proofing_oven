@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'devise'
 gem 'haml'
 gem 'sass'
 gem 'rails', '3.0.7'
