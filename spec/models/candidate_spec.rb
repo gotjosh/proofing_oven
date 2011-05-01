@@ -43,4 +43,15 @@ describe Candidate do
       it { should == ["%Dave%", "%Dave%"] }
     end
   end
+
+  describe ".filter_by" do
+    let(:hired_candidate) { Fabricate(:candidate, status: "hired") }
+    let(:rejected_candidate) { Fabricate(:candidate, status: "rejected") }
+
+    subject { Candidate.filter_by(:status, "hired") }
+
+    context "with a status of hired" do
+      it { should == [hired_candidate] } 
+    end
+  end
 end

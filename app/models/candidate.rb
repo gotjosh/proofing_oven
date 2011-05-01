@@ -1,6 +1,11 @@
 class Candidate < ActiveRecord::Base
+  STATUSES = ["pending","hired","rejected"]
   scope :search, lambda { |search_term|
     where("first_name LIKE ? OR last_name LIKE ?", *sanitize_name(search_term))
+  }
+
+  scope :filter_by, lambda { |filter, filter_term|
+    where(filter => filter_term)
   }
 
   def self.sanitize_name(name)

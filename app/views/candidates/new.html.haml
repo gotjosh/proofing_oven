@@ -11,7 +11,7 @@
       %dt= f.label :phone, "Contact Phone"
       %dd= f.text_field :phone
       %dt= f.label :status
-      %dd= f.select :status, ["pending","hired","rejected"]
+      %dd= f.select :status, Candidate::STATUSES
 
       %dt= f.label :github, "Github Id"
       %dd= f.text_field :github

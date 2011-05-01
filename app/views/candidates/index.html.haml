@@ -6,6 +6,15 @@
       = submit_tag "Search"
   = link_to "Add New Candidate", new_candidate_path, class: "button add"
 
+= form_tag [:filter, :candidates], class: "filters" do
+  %fieldset
+    %dl
+      %dt= label_tag "filter_status", "Status"
+      %dd= select_tag "filter[status]", options_for_select(Candidate::STATUSES.unshift("display all")), id: "filter_status"
+  %fieldset.actions
+    = submit_tag "Filter"
+    = link_to "reset", "#"
+
 %table.standard
   %thead
     %tr
