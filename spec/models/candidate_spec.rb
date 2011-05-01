@@ -6,7 +6,7 @@ describe Candidate do
 
   describe ".filterable_attributes" do
     it "returns the filterable attributes" do
-      Candidate.send(:filterable_attributes).should == [:status, :willing_to_relocate]
+      Candidate.send(:filterable_attributes).should == [:local, :status, :willing_to_relocate]
     end
   end
 
@@ -46,6 +46,14 @@ describe Candidate do
     let!(:candidate) { Fabricate(:candidate, status: 'hired') }
     let!(:candidate2) { Fabricate(:candidate, status: 'fired') }
     subject { Candidate.filter_by_status('hired') }
+
+    it { should == [candidate] }
+  end
+
+  describe ".filter_by_local" do
+    let!(:candidate) { Fabricate(:candidate, local: true) }
+    let!(:candidate2) { Fabricate(:candidate, local: false) }
+    subject { Candidate.filter_by_local('true') }
 
     it { should == [candidate] }
   end
