@@ -4,7 +4,11 @@
       %dt
         = label_tag :status
       %dd
-        = select_tag :status, options_for_select(Candidate.available_states)
+        = select_tag :status, options_for_select(Candidate.available_states, selected: params[:status])
+      %dt
+        = label_tag :willing_to_relocate, "Willing to Relocate"
+      %dd
+        = check_box_tag :willing_to_relocate, 'true', params[:willing_to_relocate]
   %fieldset.actions
     %input(type="submit" value="Filter")
     = link_to "reset", [:candidates]
