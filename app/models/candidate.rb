@@ -16,6 +16,8 @@ class Candidate
   field :added_on, :type => Date
   field :status
 
+  validates :status, :presence => true
+
   def name
     [first_name, last_name].join(" ")
   end
