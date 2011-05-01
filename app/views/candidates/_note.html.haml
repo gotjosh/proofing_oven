@@ -1,0 +1,5 @@
+%article
+  %h1
+    %time{datetime: note.added_on.to_date.to_s("%Y-%m-%d")}= note.added_on.to_date.to_s(:pretty)
+  %p= note.comment
+  %a.delete(href="#") delete

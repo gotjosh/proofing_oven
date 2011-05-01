@@ -31,13 +31,9 @@
         %dt Resume
         %dd
           %a(href='#') john-doe.pdf
-    - candidate.notes.each do |note|
-      %article
-        %h1
-          %time{datetime: note.added_on.to_date.to_s("%Y-%m-%d")}= note.added_on.to_date.to_s(:pretty)
-        %p= note.comment
-        %a.delete(href="#") delete
-    %p.actions= link_to 'Add Note', '#', class: "button add"
+
+    = render partial: 'note', collection: candidate.notes
+
     %form.note(action="" method="post")
       %fieldset
         %dl
