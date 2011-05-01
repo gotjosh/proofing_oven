@@ -5,3 +5,4 @@
   %td= candidate.github_id
   %td= candidate.twitter_id
   %td= candidate.skills * ', '
+  %td= button_to 'Accept', [:accept, candidate], method: :post

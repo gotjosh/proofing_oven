@@ -16,6 +16,12 @@ class CandidatesController < ApplicationController
     respond_with candidate
   end
 
+  def accept
+    flash[:notice] = "#{candidate.email} got the job"
+    CandidateMailer.accept(candidate).deliver
+    redirect_to candidates_path
+  end
+
   private
 
   def interpolation_options
