@@ -16,6 +16,7 @@ group :development, :test do
   gem 'fabrication'
   gem 'fuubar'
   gem 'fuubar-cucumber'
+  gem 'interactive_editor'
   gem 'itslog'
   gem 'launchy'
   gem 'shoulda'
