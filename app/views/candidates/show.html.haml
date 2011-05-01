@@ -1,3 +1,6 @@
+- content_for :head do
+  = javascript_include_tag "candidate"
+
 %section#candidate_show
   #main
     %header
@@ -34,15 +37,13 @@
 
     = render partial: 'note', collection: candidate.notes
 
-    %form.note(action="" method="post")
+    = form_for [candidate, note] do |f|
       %fieldset
         %dl
-          %dt
-            %label Note
-          %dd
-            %textarea(rows="8" cols="80")
+          %dt= f.label :comment, "Note"
+          %dd= f.text_area :comment, :rows => 8, :cols => 80
       %fieldset.actions
-        %input(type="submit" value="Add Candidate")
+        = f.submit "Add Note"
         %a(href="#") Cancel
   %aside
     %figure
