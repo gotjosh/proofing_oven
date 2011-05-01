@@ -1,0 +1,27 @@
+= form_for candidate do |f|
+  %h1 Add a New Candidate
+  %fieldset
+    %dl
+      %dt= f.label :first_name, "First Name"
+      %dd= f.text_field :first_name
+      %dt= f.label :last_name, "Last Name"
+      %dd= f.text_field :last_name
+      %dt= f.label :email
+      %dd= f.text_field :email
+      %dt= f.label :phone, "Contact Phone"
+      %dd= f.text_field :phone
+      %dt= f.label :status
+      %dd= f.select :status, ["pending","hired","rejected"]
+
+      %dt= f.label :github, "Github Id"
+      %dd= f.text_field :github
+      %dt= f.label :twitter, "Twitter Id"
+      %dd= f.text_field :twitter
+      %dt= f.label :local
+      %dd= f.check_box :local
+      %dt= f.label :willing_to_relocate, "Willing to Relocate"
+      %dd= f.check_box :willing_to_relocate
+
+  %fieldset.actions
+    = f.submit "Add Candidate"
+    %a(href="#") Cancel
