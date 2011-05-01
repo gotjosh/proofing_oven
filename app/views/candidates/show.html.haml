@@ -24,3 +24,8 @@
       %dl
         %dt Willing to Relocate?
         %dd= boolean_transformer(candidate.relocate)
+
+  %aside
+    %figure
+      %figcaption Profile Image
+      = image_tag candidate.profile_image.url

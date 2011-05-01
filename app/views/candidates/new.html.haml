@@ -1,4 +1,4 @@
-= form_for candidate do |f|
+= form_for candidate, :html => { :multipart => true } do |f|
   %h1 Add a New Candidate
 
   - if errors.any?
@@ -28,6 +28,9 @@
 
       %dt= f.label :twitter, "Twitter ID"
       %dd= f.text_field :twitter
+
+      %dt= f.label :profile_image, "Profile Image"
+      %dd= f.file_field :profile_image
 
       %dt= f.label :local, "Local"
       %dd= f.check_box :local
