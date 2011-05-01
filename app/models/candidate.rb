@@ -3,8 +3,6 @@ class Candidate
 
   STATES = %w(Pending Accepted Rejected)
 
-  embedded_in :user
-
   field :first_name
   field :last_name
   field :email
@@ -15,6 +13,9 @@ class Candidate
   field :willing_to_relocate, :type => Boolean
   field :added_on, :type => Date
   field :status
+
+  embedded_in :user
+  embeds_many :notes
 
   validates :status, :presence => true
 
