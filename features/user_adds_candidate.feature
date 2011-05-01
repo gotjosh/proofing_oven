@@ -31,4 +31,4 @@ Feature: User adds candidate
     And I check "Local"
     And I check "Willing to Relocate"
     And I press "Add Candidate"
-    Then I should see "Doe, John"
+    Then I should see "John Doe"

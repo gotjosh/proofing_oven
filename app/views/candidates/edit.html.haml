@@ -1,6 +1,11 @@
 = form_for candidate do |f|
   %h1 Edit Candidate
-  = render :partial => 'form', locals: { form: f }
+  %fieldset
+    %dl
+      = render :partial => 'form', locals: { form: f }
+      = f.fields_for :notes, note do |ff|
+        %dt= ff.label :body, "Note"
+        %dd= ff.text_area :body
 
   %fieldset.actions
     = f.submit "Update Candidate"

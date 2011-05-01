@@ -42,4 +42,4 @@ Feature: User edits candidate
     And I uncheck "Local"
     And I uncheck "Willing to Relocate"
     And I press "Update Candidate"
-    Then I should see "Doe, John"
+    Then I should see "John Doe"
