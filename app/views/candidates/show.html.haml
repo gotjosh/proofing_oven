@@ -1,3 +1,5 @@
+= content_for :head do
+  = javascript_include_tag 'candidate'
 %section#candidate_show
   #main
     %header
@@ -30,3 +32,26 @@
       %dl
         %dt Willing to Relocate
         %dd= humanize_boolean(candidate.willing_to_relocate)
+
+    - candidate.notes.each do |note|
+      %article
+        %h1 #{note.created_at.to_s(:short)} #{note.tags.map(&:name).join(" ")}
+        %p= note.body
+
+
+    = form_for candidate do |candidate_form|
+      %fieldset
+        %dl
+          = candidate_form.fields_for :notes, Note.new do |note_form|
+            %dt
+              = note_form.label :body, "Note"
+            %dd
+              = note_form.text_area :body
+            = note_form.fields_for :tags, Tag.new do |tag_form|
+              %dt
+                = tag_form.label :name, "Tags"
+              %dd
+                = tag_form.text_field :name
+      %fieldset.actions
+        %input(type="submit" value="Add Note")
+        %a(href="#") Cancel
