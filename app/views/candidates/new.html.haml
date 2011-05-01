@@ -1,0 +1,44 @@
+= form_for candidate do |f|
+  %h1 Add a New Candidate
+
+  - if errors.any?
+    %ul.form_errors
+    - errors.each do |error|
+      %li= error
+
+  %fieldset
+    %dl
+      %dt= f.label :first_name, "First Name"
+      %dd= f.text_field :first_name
+
+      %dt= f.label :last_name, "Last Name"
+      %dd= f.text_field :last_name
+
+      %dt= f.label :email
+      %dd= f.text_field :email
+      
+      %dt= f.label :phone, "Contact Phone"
+      %dd= f.text_field :phone
+
+      %dt= f.label :status
+      %dd= f.select :status, ["pending", "hired", "rejected"], :include_blank => true
+
+      %dt= f.label :github, "Github ID"
+      %dd= f.text_field :github
+
+      %dt= f.label :twitter, "Twitter ID"
+      %dd= f.text_field :twitter
+
+      %dt= f.label :local, "Local"
+      %dd= f.check_box :local
+      
+      %dt= f.label :relocate, "Willing to relocate"
+      %dd= f.check_box :relocate
+
+
+  %fieldset.actions
+    %input(type="submit" value="Add Candidate")
+    = link_to "Cancel", candidates_path()
+
+
+
