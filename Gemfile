@@ -18,6 +18,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug'
+  gem 'shoulda-matchers'
   gem 'thin'
   gem 'timecop'
 end
