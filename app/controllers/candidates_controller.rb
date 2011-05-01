@@ -10,6 +10,11 @@ class CandidatesController < ApplicationController
   end
   alias update create
 
+  def destroy
+    candidate.destroy
+    respond_with candidate
+  end
+
   private
 
   def interpolation_options
