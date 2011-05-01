@@ -1,7 +1,8 @@
 %section#candidate_show
   #main
     %header
-      %h1 John Doe
+      = link_to "Edit Candidate", edit_candidate_path(candidate), class: "edit"
+      %h1= candidate.full_name
       %dl.small
         %dt Status
         %dd= candidate.status

@@ -6,4 +6,5 @@ class CandidatesController < ApplicationController
     candidate.save
     respond_with :candidate, location: candidates_path
   end
+  alias :update :create
 end

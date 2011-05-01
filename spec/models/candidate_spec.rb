@@ -54,4 +54,14 @@ describe Candidate do
       it { should == [hired_candidate] } 
     end
   end
+
+  describe "#full_name" do
+    let(:candidate) { Fabricate(:candidate, first_name: "Mary", last_name: "Jane") }
+
+    subject { candidate.full_name }
+
+    it "is the candidate's first and last name" do
+      subject.should == "Mary Jane"
+    end
+  end
 end

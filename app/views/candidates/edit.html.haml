@@ -1,7 +1,7 @@
 = form_for candidate do |f|
-  %h1 Add a New Candidate
+  %h1 Edit Candidate
   = render :partial => 'form', locals: { form: f }
 
   %fieldset.actions
-    = f.submit "Add Candidate"
+    = f.submit "Update Candidate"
     %a(href="#") Cancel

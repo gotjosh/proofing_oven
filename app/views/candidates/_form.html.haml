@@ -1,0 +1,21 @@
+%fieldset
+  %dl
+    %dt= form.label :first_name, "First Name"
+    %dd= form.text_field :first_name
+    %dt= form.label :last_name, "Last Name"
+    %dd= form.text_field :last_name
+    %dt= form.label :email
+    %dd= form.text_field :email
+    %dt= form.label :phone, "Contact Phone"
+    %dd= form.text_field :phone
+    %dt= form.label :status
+    %dd= form.select :status, Candidate::STATUSES
+
+    %dt= form.label :github, "Github Id"
+    %dd= form.text_field :github
+    %dt= form.label :twitter, "Twitter Id"
+    %dd= form.text_field :twitter
+    %dt= form.label :local
+    %dd= form.check_box :local
+    %dt= form.label :willing_to_relocate, "Willing to Relocate"
+    %dd= form.check_box :willing_to_relocate
