@@ -5,7 +5,7 @@ ProofingOven::Application.routes.draw do
 
   namespace :api do
     scope ":authentication_token" do
-      resources :candidates, only: :show
+      resources :candidates, only: [:index, :show]
     end
   end
 

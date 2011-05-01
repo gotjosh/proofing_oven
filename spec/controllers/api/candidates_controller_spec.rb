@@ -58,4 +58,31 @@ describe Api::CandidatesController do
       its(:status) { should == 401 }
     end
   end
+
+  context "GET index" do
+    let!(:candidates) do
+      (1..5).map { Fabricate(:candidate, user: user) }
+    end
+    let(:candidate_ids) { candidates.map { |c| c._id.to_s } }
+    let(:json) { JSON.parse(response.body) }
+    subject { response }
+
+    context "success" do
+      before { get :index, authentication_token: user.authentication_token }
+
+      it { should be_successful }
+      its(:status) { should == 200 }
+
+      it 'returns the candidate as json' do
+        json.map { |o| o["_id"] }.should =~ candidate_ids
+      end
+    end
+
+    context "not authorized" do
+      before { get :index, authentication_token: "sfdhjl213" }
+      it { should_not be_successful }
+      its(:status) { should == 401 }
+    end
+
+  end
 end

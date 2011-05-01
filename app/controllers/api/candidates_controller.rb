@@ -5,6 +5,10 @@ class Api::CandidatesController < ApplicationController
 
   before_filter :authentication_required
 
+  def index
+    render json: candidates
+  end
+
   def show
     if candidate
       render json: candidate.to_json
