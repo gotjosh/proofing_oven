@@ -20,3 +20,8 @@
   %dl
     %dt= form.label :note
     %dd= form.text_area :note
+  .skills
+    - skills.each do |skill|
+      %dl.checkbox
+        %dd= form.check_box :skills, { id: "candidate_skills_#{skill.name}", name: 'candidate[skills][]' }, skill.name, nil
+        %dt= form.label :skills, skill.name, for: "candidate_skills_#{skill.name}"

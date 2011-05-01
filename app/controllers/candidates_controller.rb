@@ -1,6 +1,7 @@
 class CandidatesController < ApplicationController
   expose(:candidates) { Candidate.all }
   expose(:candidate)
+  expose(:skills) { Skill.all }
 
   respond_to :html
 

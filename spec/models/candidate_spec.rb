@@ -34,4 +34,24 @@ describe Candidate do
     end
   end
 
+  describe "#skills=" do
+    let(:candidate) do
+      Fabricate.build(:candidate, skills: skills)
+    end
+    subject { candidate.skills }
+
+    context 'when passed empty strings' do
+      let(:skills) { ["", "BDD", "", "Rails"] }
+
+      it { should == ["BDD", "Rails"] }
+    end
+  end
+
+  describe "#skills" do
+    let(:candidate) { Fabricate.build(:candidate) }
+    context 'when nil' do
+      its(:skills) { should == [] }
+    end
+  end
+
 end

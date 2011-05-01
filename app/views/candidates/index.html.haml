@@ -5,7 +5,7 @@
   %caption Candidates
   %thead
     %tr
-      - ["Name", "Phone", "Email", "Github", "Twitter"].each do |th|
+      - %w(Name Phone Email Github Twitter Skills).each do |th|
         %th= th
   %tbody
     = render candidates
