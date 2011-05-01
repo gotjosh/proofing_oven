@@ -1,10 +1,21 @@
+%form.filters
+  %fieldset
+    %dl
+      %dt
+        = label_tag :status
+      %dd
+        = select_tag :status, options_for_select(Candidate.available_states)
+  %fieldset.actions
+    %input(type="submit" value="Filter")
+    = link_to "reset", [:candidates]
+
 %table.standard
   %thead
     %tr
       - ["Name", "Phone", "Email", "Github", "Twitter", "Local", "Willing to Relocate"].each do |th|
         %th= th
   %tbody
-    - candidates.each do |candidate|
+    - filtered_candidates.each do |candidate|
       %tr
         %td= link_to candidate.name, [candidate]
         %td= candidate.phone
