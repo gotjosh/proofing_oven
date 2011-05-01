@@ -27,3 +27,10 @@
       %dl
         %dt Willing to Relocate?
         %dd= candidate.willing_to_relocate? ? "Yes" : "No"
+
+
+  - candidate.notes.each do |note|
+    %article
+      %h1
+        %time(datetime="#{note.created_at}")= note.created_at.to_date.to_s(:us)
+      %p= note.body

@@ -1,5 +1,8 @@
 class Candidate < ActiveRecord::Base
   STATUSES = ["pending","hired","rejected"]
+
+  has_many :notes
+
   scope :search, lambda { |search_term|
     where("first_name LIKE ? OR last_name LIKE ?", *sanitize_name(search_term))
   }
