@@ -31,16 +31,12 @@
         %dt Resume
         %dd
           %a(href='#') john-doe.pdf
-    %article
-      %h1
-        %time(datetime="2011-04-23") 04/23/2011
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis pretium mi, quis vehicula tortor ultricies et. Ut eget massa at neque tempor vehicula vitae at erat. Sed velit nisl, consequat consectetur condimentum congue, feugiat a dolor. Nulla et sem sem. Fusce pharetra nunc interdum nulla imperdiet eget vulputate metus porttitor. Curabitur sed odio neque. Donec erat risus, blandit a varius quis, suscipit quis dui. Maecenas eleifend dui ut sem aliquet et vestibulum magna viverra. Sed rhoncus accumsan sapien ut faucibus.
-      %a.delete(href="#") delete
-    %article
-      %h1
-        %time(datetime="2011-03-23") 03/23/2011
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis pretium mi, quis vehicula tortor ultricies et. Ut eget massa at neque tempor vehicula vitae at erat. Sed velit nisl, consequat consectetur condimentum congue, feugiat a dolor.
-      %a.delete(href="#") delete
+    - candidate.notes.each do |note|
+      %article
+        %h1
+          %time{datetime: note.added_on.to_date.to_s("%Y-%m-%d")}= note.added_on.to_date.to_s(:pretty)
+        %p= note.comment
+        %a.delete(href="#") delete
     %p.actions= link_to 'Add Note', '#', class: "button add"
     %form.note(action="" method="post")
       %fieldset
