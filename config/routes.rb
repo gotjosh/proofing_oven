@@ -4,6 +4,7 @@ ProofingOven::Application.routes.draw do
   resources :candidates, except: :destroy do
     post :search, on: :collection, controller: "candidates_search"
     post :filter, on: :collection, controller: "candidates_filter"
+    resources :notes, only: :destroy
   end
 
   match 'ui(/:action)', controller: 'ui'

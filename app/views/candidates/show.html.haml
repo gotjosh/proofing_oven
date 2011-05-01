@@ -33,6 +33,7 @@
         %h1
           %time(datetime="#{note.created_at}")= note.created_at.to_date.to_s(:us)
         %p= note.body
+        = link_to "delete", candidate_note_path(candidate, note), :class => "delete", :method => :delete
 
     = form_for candidate do |f|
       = f.fields_for :notes, candidate.notes.build do |ff|
