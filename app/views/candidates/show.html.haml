@@ -28,9 +28,16 @@
         %dt Willing to Relocate?
         %dd= candidate.willing_to_relocate? ? "Yes" : "No"
 
+    - candidate.notes.each do |note|
+      %article
+        %h1
+          %time(datetime="#{note.created_at}")= note.created_at.to_date.to_s(:us)
+        %p= note.body
 
-  - candidate.notes.each do |note|
-    %article
-      %h1
-        %time(datetime="#{note.created_at}")= note.created_at.to_date.to_s(:us)
-      %p= note.body
+    = form_for candidate do |f|
+      = f.fields_for :notes, candidate.notes.build do |ff|
+        %fieldset
+          %p.actions= f.submit 'Add Note', class: "add"
+          %dl
+            %dt= ff.label :body, "Note"
+            %dd= ff.text_area :body
