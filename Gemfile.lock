@@ -40,6 +40,8 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.3)
+    carrierwave (0.5.3)
+      activesupport (~> 3.0)
     celerity (0.8.9)
     chalofa_ruby-progressbar (0.0.9.1)
     childprocess (0.1.8)
@@ -92,6 +94,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mini_magick (3.2.1)
+      subexec (~> 0.0.4)
     nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -147,6 +151,7 @@ GEM
       rubyzip
     shoulda (2.11.3)
     sqlite3 (1.3.3)
+    subexec (0.0.4)
     term-ansicolor (1.0.5)
     thin (1.2.11)
       daemons (>= 1.0.9)
@@ -164,6 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  carrierwave
   cucumber-rails
   database_cleaner
   decent_exposure
@@ -173,6 +179,7 @@ DEPENDENCIES
   haml
   itslog
   launchy
+  mini_magick
   rails (= 3.0.7)
   rspec-rails
   ruby-debug19
