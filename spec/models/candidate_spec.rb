@@ -8,4 +8,39 @@ describe Candidate do
       subject.should == "Doe, John"
     end
   end
+
+  describe ".search" do
+    let!(:candidate_john) { Fabricate(:candidate, first_name: "John", last_name: "Doe") }
+    let!(:candidate_dave) { Fabricate(:candidate, first_name: "Dave", last_name: "Happy") }
+    let!(:candidate_joe) { Fabricate(:candidate, first_name: "Joe", last_name: "Blow") }
+
+    context "John" do
+      subject { Candidate.search("John") }
+      it { should == [candidate_john] }
+    end
+
+    context "name starts with Jo" do
+      subject { Candidate.search("Jo") }
+      it { should == [candidate_john, candidate_joe] }
+    end
+
+    context "first name is 'Dave' and last name is 'Happy'" do
+      subject { Candidate.search("Dave Happy") }
+      it { should == [candidate_dave] }
+    end
+  end
+
+  describe ".sanitize_name" do
+    subject { Candidate.sanitize_name(name) }
+
+    context "with a first and last name" do
+      let(:name) { "Dave Happy" }
+      it { should == ["%Dave%", "%Happy%"] }
+    end
+
+    context "with a first or last name only" do
+      let(:name) { "Dave" }
+      it { should == ["%Dave%", "%Dave%"] }
+    end
+  end
 end

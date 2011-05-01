@@ -1,8 +1,9 @@
 .search
-  %form(action="" method="post")
+  = form_tag [:search, :candidates] do
     %fieldset
-      %input(type="text")
-      %input(type="submit" value="Search")
+      = label_tag "search_value", "Search", class: "hidden"
+      = text_field_tag "search[value]", nil, id: "search_value"
+      = submit_tag "Search"
   = link_to "Add New Candidate", new_candidate_path, class: "button add"
 
 %table.standard
