@@ -23,7 +23,7 @@
   %tbody
     - candidates.each do |candidate|
       %tr
-        %td= candidate.last_first
+        %td= link_to candidate.last_first, candidate
         %td= candidate.phone
         %td= candidate.email
         %td= candidate.github
