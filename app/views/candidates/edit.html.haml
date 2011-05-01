@@ -1,0 +1,6 @@
+= form_for candidate do |f|
+  %h1 Edit Candidate
+  = render 'form', form: f
+  %fieldset.actions
+    = f.submit "Save"
+    %a(href="#") Cancel

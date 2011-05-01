@@ -6,4 +6,5 @@ class CandidatesController < AuthenticatedController
   def create
     respond_with(candidate.tap(&:save))
   end
+  alias update create
 end

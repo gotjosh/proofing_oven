@@ -1,7 +1,7 @@
 %section#candidate_show
   #main
     %header
-      = link_to "Edit Candidate", "#", class: "edit"
+      = link_to "Edit Candidate", [:edit, candidate], class: "edit"
       %h1= candidate.name
       %dl.small
         %dt Status
