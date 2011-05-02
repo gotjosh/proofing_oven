@@ -9,3 +9,7 @@ Then /^I should see checkboxes for the following skills:$/ do |table|
     field_labeled(row.first)['type'].should == 'checkbox'
   end
 end
+
+Then /^I should see a link to "([^"]*)"$/ do |filename|
+  page.should have_css("a[href*='#{filename}']", text: filename)
+end

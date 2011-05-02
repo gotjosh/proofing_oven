@@ -17,6 +17,8 @@ Feature: User adds skills to candidate
       | Cucumber   |
       | Rails      |
 
+  # HACK: Rack test clobbering our checkbox params
+  @javascript
   Scenario: choosing skills
     When I check "BDD"
     And I check "Rails"
@@ -24,6 +26,8 @@ Feature: User adds skills to candidate
 
     Then I should see "BDD, Rails"
 
+  # HACK: Rack test clobbering our checkbox params
+  @javascript
   Scenario: applied skills appear checked
     When I check "BDD"
     And I check "Rails"

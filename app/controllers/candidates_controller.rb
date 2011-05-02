@@ -5,6 +5,8 @@ class CandidatesController < ApplicationController
 
   respond_to :html
 
+  def edit; end
+
   def create
     candidate.save
     respond_with candidate

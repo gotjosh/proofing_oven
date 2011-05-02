@@ -12,6 +12,8 @@ class Candidate
 
   validates :first_name, :last_name, presence: true
 
+  mount_uploader :resume, ResumeUploader
+
   def full_name
     "#{first_name} #{last_name}"
   end

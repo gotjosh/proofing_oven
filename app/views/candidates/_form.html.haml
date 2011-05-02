@@ -20,6 +20,9 @@
   %dl
     %dt= form.label :note
     %dd= form.text_area :note
+  %dl
+    %dt= form.label :resume
+    %dd= form.file_field :resume
   .skills
     - skills.each do |skill|
       %dl.checkbox

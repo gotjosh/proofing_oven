@@ -5,4 +5,5 @@
   %td= candidate.github_id
   %td= candidate.twitter_id
   %td= candidate.skills * ', '
+  %td= link_to_if candidate.resume.present?, candidate.resume_filename, candidate.resume_url
   %td= button_to 'Accept', [:accept, candidate], method: :post
